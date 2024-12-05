@@ -86,9 +86,10 @@ const galleryItems2 = document.getElementById("gallery-swiper2");
 const galleryItems3 = document.getElementById("gallery-swiper3");
 const galleryItems4 = document.getElementById("gallery-swiper4");
 const galleryItems5 = document.getElementById("gallery-swiper5");
+const galleryItems6 = document.getElementById("gallery-swiper6");
 
 const galleryImgs = [];
-Array.from({ length: 55}, (_, i) => galleryImgs.push(`${i + 1}.jpg`));
+Array.from({ length: 61}, (_, i) => galleryImgs.push(`${i + 1}.jpg`));
 
 const sheGalleriaImgs = [];
 Array.from({ length: 29 }, (_, i) => sheGalleriaImgs.push(`${i + 1}.jpg`));
@@ -99,6 +100,9 @@ Array.from({ length: 7}, (_, i) => sparkImgs.push(`${i + 1}.jpg`));
 
 const onboardImgs = [];
 Array.from({ length: 19 }, (_, i) => onboardImgs.push(`${i + 1}.jpg`)); 
+
+const SHEgalleriaImgs = [];
+Array.from({ length: 23}, (_, i) => SHEgalleriaImgs.push(`${i + 1}.jpg`));
 
 
 const htmlString = galleryImgs.reverse()
@@ -172,22 +176,42 @@ const SKkhtmlString = sparkImgs
 galleryItems4.innerHTML = SKkhtmlString;
 
 
-// const OBhtmlString = onboardImgs
-//    .map((item, index) => {
-//      return `
-//  <div key=${index} class="swiper-slide">
-//          <a href="./assets/images/ONBOARD/OB${item}" data-fancybox="gallery">
-//              <div class="image" style="background-image: url(./assets/images/ONBOARD/OB${item})">
-//                  <div class="overlay">
-//                      <em class="mdi mdi-magnify-plus"></em>
-//                  </div>
-//              </div>
-//          </a>
-//      </div>
-//  `;
-//    })
-//    .join("");
-//  galleryItems5.innerHTML = OBhtmlString;
+const OBhtmlString = onboardImgs
+  .map((item, index) => {
+    return `
+<div key=${index} class="swiper-slide">
+        <a href="./assets/images/ONBOARD/${item}" data-fancybox="gallery">
+            <div class="image" style="background-image: url(./assets/images/ONBOARD/OB${item})">
+                <div class="overlay">
+                    <em class="mdi mdi-magnify-plus"></em>
+                </div>
+            </div>
+        </a>
+    </div>
+`;
+  })
+  .join("");
+galleryItems5.innerHTML = OBhtmlString;
+
+
+const SHGhtmlString = SHEgalleriaImgs
+  .map((item, index) => {
+    return `
+<div key=${index} class="swiper-slide">
+        <a href="./assets/images/SHE-GALLERIA-2.0/${item}" data-fancybox="gallery">
+            <div class="image" style="background-image: url(./assets/images/SHE-GALLERIA-2.0/SHE${item})">
+                <div class="overlay">
+                    <em class="mdi mdi-magnify-plus"></em>
+                </div>
+            </div>
+        </a>
+    </div>
+`;
+  })
+  .join("");
+galleryItems6.innerHTML = SHGhtmlString;
+
+
 
 
 

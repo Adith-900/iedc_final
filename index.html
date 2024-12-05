@@ -388,11 +388,40 @@
       <h2 style="text-align: center;">ON BOARD</h2>
       <div class="carousel-gallery">
         <div class="swiper-container swiper">
-          <div id="gallery-swiper4" class="swiper-wrapper"></div>
+          <div id="gallery-swiper5" class="swiper-wrapper"></div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
+
+    <section id="gallery" class="gallery">
+      <h2 style="text-align: center;">SHE GALLERIA 2.0</h2>
+      <div class="carousel-gallery">
+        <div class="swiper-container swiper">
+          <div id="gallery-swiper6" class="swiper-wrapper"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- ====== Gallrey Start =====-->
+
+    <!-- ====== Gallrey Slider Start =====-->
+    <section id="gallery" class="gallery">
+      <h2 style="text-align: center;">Gallery</h2>
+      <div class="carousel-gallery">
+        <div class="swiper-container swiper">
+          <div id="gallery-swiper1" class="swiper-wrapper"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- ===== Gallery End ===== -->
 
     
 
@@ -436,7 +465,7 @@
               </div>
               <div class="ud-team-info">
                 <h5>Prof. E. P. Imbichikoya</h5>
-                <h6>Principal</h6>
+                <h6>Principal </h6>
               </div>
               <ul class="ud-team-socials">
                 <li>
@@ -1310,21 +1339,7 @@
     </section>
     <!-- ====== Team End ====== -->
 
-    <!-- ====== Gallrey Start =====-->
-
-    <!-- ====== Gallrey Slider Start =====-->
-    <section id="gallery" class="gallery">
-      <h2 style="text-align: center;">Gallery</h2>
-      <div class="carousel-gallery">
-        <div class="swiper-container swiper">
-          <div id="gallery-swiper1" class="swiper-wrapper"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
     
-    
-    <!-- ===== Gallery End ===== -->
 
     <!-- ====== Contact Start ====== -->
     <section id="contact" class="ud-contact">
@@ -1403,7 +1418,7 @@
                   <input
                     type="text"
                     name="phone"
-                    placeholder="+91 25452 11552"
+                    placeholder="+91 98765 43210"
                   />
                 </div>
                 <div class="ud-form-group">
@@ -1486,5 +1501,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
     <script src="assets/js/main.js"></script>
-  </body>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
 </html>
